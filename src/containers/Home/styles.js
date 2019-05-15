@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     background-color: #FFF9C4;
-`
+`;
 
 export const ContentArea =  styled.div`
     display: flex;
@@ -16,4 +16,4 @@ export const ContentArea =  styled.div`
     bottom: 0;
     overflow-y: scroll;
     padding-bottom: 72px;
-`
+`;

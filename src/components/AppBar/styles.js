@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
 
 export const Icon = styled.div`
     padding: 16px;
+    cursor: pointer;
 `
 
 export const Title = styled.div`

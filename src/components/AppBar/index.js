@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Wrapper, Icon, Title, LeadingSpace } from './styles';
-import {NavLink} from "react-router-dom"
 
 // 1. Icon bisa ganti >> this.props.icon "fas fa-bars"
 // 2. Title bisa ganti >> this.props.title
@@ -10,9 +9,9 @@ export default class AppBar extends Component {
         return (
             <Wrapper>
                 {
-                   this.props.icon ?
-
-                        <Icon className={this.props.icon} onClick={this.props.onClickIcon} /> :
+                    this.props.icon ?
+                        <Icon className={this.props.icon}
+                            onClick={this.props.onClickIcon} /> :
                         <LeadingSpace />
                 }
                 <Title>

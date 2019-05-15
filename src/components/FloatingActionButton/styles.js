@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
     flex-flow: row;
     align-items: center;
     z-index: 100;
+    cursor: pointer;
 `;
 
 export const Icon = styled.div`

@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import { Wrapper} from './styles';
+import { Wrapper } from './styles';
 
 export default class MyButton extends Component {
     render = () => {
         return (
-            <Wrapper>
-button
+            <Wrapper
+                style={this.props.style}
+                onClick={this.props.onClick}>
+                {
+                    this.props.label || 'Click Me'
+                }
             </Wrapper>
         );
     }

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import { Wrapper, Title } from './styles';
+import { Wrapper, InputArea, Title } from './styles';
 
 export default class InputWithTitle extends Component {
     render = () => {
         return (
-            <Wrapper>
-                <Title>FFFFFFF</Title>
-<input/>
+            <Wrapper style={this.props.style}>
+                <Title>{this.props.title}</Title>
+                <InputArea
+                    onChange={(e) => this.props.onChange(e.target.value)}
+                    value={this.props.value}/>
             </Wrapper>
         );
     }

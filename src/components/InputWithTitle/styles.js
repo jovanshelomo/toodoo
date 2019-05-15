@@ -1,14 +1,29 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    width: 100%;
-    height: 100%;
-    background-color: #FFF9C4;
-`
-export const Title = styled.div`
-margin-bottom: 4px;
-font-size: 24px;
-color: #000;
-font-weight: lighter;
+    align-self:stretch;
+    display:flex;
+    flex-direction:column;
+`;
 
-`
+export const Title = styled.div`
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(0,0,0,0.75);
+    margin-bottom: 4px;
+`;
+
+export const InputArea = styled.input`
+    font-size: 18px;
+    background-color: #FFD54F;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: rgba(0,0,0,0.75);
+
+    &:focus {
+        box-shadow: inset 0 5px #FFB300;
+    }
+`;

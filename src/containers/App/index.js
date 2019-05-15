@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
-import Home from '../Home';
-import ToDoEditor from '../ToDoEditor'
+import { BrowserRouter, Route } from 'react-router-dom';
 import { Wrapper } from './styles';
-import { BrowserRouter, Route } from 'react-router-dom'
+import Home from '../Home';
+import ToDoEditor from '../ToDoEditor';
 
 export default class App extends Component {
-
-    render = () => {
+    render() {
         return (
             <BrowserRouter>
                 <Wrapper>
-
-                    <Route exact path='/' component={Home} />
+                    <Route path='/' component={Home} exact/>
                     <Route path='/new' component={ToDoEditor} />
-
+                    <Route path='/edit' component={ToDoEditor} />
                 </Wrapper>
             </BrowserRouter>
-
         );
-
     }
 }

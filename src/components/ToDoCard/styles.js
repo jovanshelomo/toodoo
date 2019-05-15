@@ -8,10 +8,16 @@ padding:16px;
 box-shadow: 1px 1px 6px rgba(0,0,0,0.25);
 `
 
+export const TitleRow = styled.div`
+  display: flex;
+`
+
 export const Title = styled.div`
 font-size: 24px;
 color: #212121;
 font-weight: 700;
+margin-right: auto;
+cursor: pointer;
 `
 
 export const Row = styled.div`
@@ -39,6 +45,7 @@ margin-left:8px;
 `
 
 export const Divider = styled.div`
+
 width: 100%;
 height: 1px;
 background-color: #616161;
