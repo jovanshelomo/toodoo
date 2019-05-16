@@ -20,7 +20,8 @@ export default class ToDoEditor extends Component {
       due: '',
       tasks: [],
 
-      noTasks: true
+      noTasks: true,
+      unchanged: true
 
     }
 
@@ -36,14 +37,25 @@ export default class ToDoEditor extends Component {
         due: editedTodo.due,
         tasks: editedTodo.tasks,
 
-        noTasks: false
+        noTasks: false,
+        unchanged: true
       }
 
     }
   }
 
   _goBack = () => {
-      this.props.history.goBack();
+if(this.state.unchanged){
+  this.props.history.goBack();
+}
+else{
+  if(window.confirm("You have an unsaved data. Do you want to continue?")){
+    this.props.history.goBack();
+  }else{
+
+  }
+}
+
   }
 
   _onChange = (field, value) => {
@@ -51,6 +63,7 @@ export default class ToDoEditor extends Component {
 
     //to set fab background color
     this.setState({ bgColor: '#4CAF50' })
+    this.setState({unchanged: false})
   }
 
   _addTask = () => {
@@ -74,6 +87,7 @@ export default class ToDoEditor extends Component {
 
     //to set fab background color
     this.setState({ bgColor: '#4CAF50' })
+    this.setState({unchanged: false})
 
     if (index >= 0) {
       tempTask[index].content = value;
@@ -188,7 +202,7 @@ export default class ToDoEditor extends Component {
                     <InputWithTitle
                       style={{ flex: 1 }}
                       title={`Task ${t.id}`}
-                      value={t.content}
+                      value={t.c582ontent}
                       onChange={(v) => this._onChangeTask(t.id, v)} />
                   </TaskEditorRow>
                 ))

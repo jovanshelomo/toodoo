@@ -19,7 +19,6 @@ export const ContentArea = styled.div`
 
     @media only screen and (max-width: 700px){
       flex-flow:column;
-      //kok gampang banget ya hehe :)
         }
 `;
 
@@ -29,7 +28,6 @@ export const Column = styled.div`
 
   @media only screen and (min-width: 700px){
     flex:1;
-    //kalo gapake ini si tulisan tasks nya rada kebawah dikit, trus kalo di add task jadi jump ke atas lagi
       }
 `;
 
@@ -75,7 +73,7 @@ export const Divider = styled.div`
   background-color: #616161;
   margin-right: 16px;
   margin-left: 16px;
-  margin-bottom: 16 px;
+  margin-bottom: 16px;
 
     }
 
