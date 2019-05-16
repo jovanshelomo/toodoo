@@ -132,9 +132,9 @@ else{
 
       updatedTodos.push({
         id: id,
-        title: this.state.title,
-        location: this.state.location,
-        due: this.state.due,
+        title: this.state.title.trim().length != 0 ? this.state.title : "Untitled Task",
+        location: this.state.location.trim().length != 0? this.state.location : "no location",
+        due: this.state.due.trim().length != 0? this.state.due : "no due",
         tasks: this.state.tasks
       });
     }

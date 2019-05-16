@@ -21,7 +21,7 @@ export default class ToDoCard extends Component {
           <Content>{this.props.value.location}</Content>
         </Row>
         <Divider />
-        <Subtitle>{this.props.value.subtitle}</Subtitle>
+        <Subtitle>Tasks</Subtitle>
 
         {this.props.value.tasks.map(task => <TaskRow
           key={task.id}
